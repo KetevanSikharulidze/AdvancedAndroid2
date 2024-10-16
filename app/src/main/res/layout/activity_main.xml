@@ -1,93 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.fragment.app.FragmentContainerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/signUpTitleTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/signUpNameET"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/signUpNameET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_bg"
-        android:hint="enter Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/signUpEmailET"
-        app:layout_constraintEnd_toEndOf="@id/signUpTitleTV"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/signUpTitleTV"
-        app:layout_constraintTop_toBottomOf="@+id/signUpTitleTV" />
-
-    <EditText
-        android:id="@+id/signUpEmailET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_bg"
-        android:hint="enter Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/signUpNumberdET"
-        app:layout_constraintEnd_toEndOf="@id/signUpNameET"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/signUpNameET"
-        app:layout_constraintTop_toBottomOf="@+id/signUpNameET" />
-
-    <EditText
-        android:id="@+id/signUpNumberdET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_bg"
-        android:hint="enter Mobile Number"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/signUpPasswordET"
-        app:layout_constraintEnd_toEndOf="@id/signUpEmailET"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/signUpEmailET"
-        app:layout_constraintTop_toBottomOf="@+id/signUpEmailET" />
-
-    <EditText
-        android:id="@+id/signUpPasswordET"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_bg"
-        android:hint="enter Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/signUpBtn"
-        app:layout_constraintEnd_toEndOf="@id/signUpNumberdET"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/signUpNumberdET"
-        app:layout_constraintTop_toBottomOf="@+id/signUpNumberdET" />
-
-    <Button
-        android:id="@+id/signUpBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/label_name"
-        android:text="sign up"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@id/signUpPasswordET"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@id/signUpPasswordET"
-        app:layout_constraintTop_toBottomOf="@+id/signUpPasswordET" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="already signed up? sign in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/signUpPasswordET"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    app:defaultNavHost="true"
+    app:navGraph="@navigation/nav_graph" />
